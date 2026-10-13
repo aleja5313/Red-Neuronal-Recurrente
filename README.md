@@ -5,28 +5,11 @@ entrenada desde cero con el dataset **IMDB Reviews** (reseñas de películas en 
 positiva/negativa). Incluye el notebook de experimentación completo y una aplicación en
 Streamlit para probar el modelo con texto nuevo.
 
-## Estructura del repositorio
-
-```
-proyecto-rnn-imdb-sentimiento/
-├── notebooks/
-│   └── RNN_IMDB_Sentimiento.ipynb   # Notebook completo: EDA, preprocesamiento, entrenamiento, evaluación
-├── app/
-│   └── streamlit_app.py             # Aplicación Streamlit de predicción
-├── models/
-│   ├── modelo_sentimiento_imdb.keras  # Modelo entrenado (se genera al correr el notebook)
-│   └── class_names.json               # Nombres de las clases, en el orden que usa el modelo
-├── requirements.txt
-└── README.md
-```
-
 ## Dataset
 
 **IMDB Reviews** (Stanford AI Lab, descarga pública sin necesidad de cuenta de Kaggle):
 50.000 reseñas de películas en inglés, balanceadas 50/50 entre positivas y negativas
 (25.000 para entrenamiento, 25.000 para prueba).
-
----
 
 ## 1. Cómo reproducir el entrenamiento (Google Colab)
 
@@ -76,36 +59,6 @@ Requiere Python 3.10+ y que ya existan `models/modelo_sentimiento_imdb.keras` y
 
 7. **Prueba la app**: escribe una reseña de película en inglés (hay ejemplos dentro de la app)
    y verás el sentimiento predicho junto con el porcentaje de confianza.
-
-## 3. Cómo subir este proyecto a GitHub
-
-Desde la carpeta `proyecto-rnn-imdb-sentimiento` (donde ya está inicializado el repositorio
-Git local):
-
-```bash
-git remote add origin <URL-DE-TU-REPOSITORIO>.git
-git branch -M main
-git push -u origin main
-```
-
-**Si el push es rechazado** (mensaje de "rejected" / "fetch first"), normalmente es porque el
-repositorio en GitHub ya tiene algo (por ejemplo, lo creaste marcando "Add a README"):
-
-```bash
-git pull origin main --allow-unrelated-histories
-# Si aparece un conflicto en README.md, ábrelo, deja la versión que prefieras, guarda, y luego:
-git add README.md
-git commit -m "Resolver conflicto de README"
-git push -u origin main
-```
-
-Para subir cambios futuros:
-
-```bash
-git add -A
-git commit -m "Describe aquí qué cambiaste"
-git push
-```
 
 ## Resumen técnico del modelo
 
