@@ -1,0 +1,8 @@
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+aclImdb/
+aclImdb_v1.tar.gz
+*.zip
